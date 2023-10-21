@@ -9,10 +9,10 @@ namespace Repositories_Education_Platform.Contracts
 {
     public interface IRepositoryBase<T>
     {
-        void Create(T entity, bool trackChanges);
-        IQueryable<T> Read(T entity , bool trackChanges);
-        void Update(T entity, bool trackChanges);
-        void Delete(T entity);
-        IQueryable<T> GenericReadExpression(T entity, bool trackChanges, Expression<Func<T,bool>> expression);
+        void GenericCreate(T entity, bool trackChanges);
+        IQueryable<T> GenericRead(T entity , bool trackChanges);
+        void GenericUpdate(T entity, bool trackChanges);
+        void GenericDelete(T entity);
+        IQueryable<T> GenericReadExpression(bool trackChanges, Expression<Func<T,bool>> expression);
     }
 }
