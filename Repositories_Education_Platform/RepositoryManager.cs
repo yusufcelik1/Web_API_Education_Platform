@@ -25,7 +25,7 @@ namespace Repositories_Education_Platform
         public IRepositoryTeacher teacher => _teacherRepository.Value;
 
         public void Save()
-        {
+        { 
             _context.SaveChanges();
         }
     }
